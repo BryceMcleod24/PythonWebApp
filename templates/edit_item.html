@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Game Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Modern Game Store</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+            <form action="/edit_item/{{ item.id }}" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Game Name</label>
+                <input type="text" name="gameName" class="form-control" value="{{ item.name if item }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Game Description</label>
+                <textarea name="gameDescription" class="form-control" required>{{ item.description if item }}</textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Game Image</label>
+                <input type="file" name="gameImage" class="form-control" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-dark">
+                {{ "Update Game" if item else "Add Game" }}
+            </button>
+        </form>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container">
+            <span>&copy; 2023 Modern Game Store</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
