@@ -32,6 +32,9 @@ This is a Flask web application that allows users to manage items in a Firebase 
 - This application is intended for educational purposes and is to be accessed and used by authorized personnel only.
 - Ensure that your Firebase credentials are correctly set up in a `serviceAccountKey.json` file.
 
+Video Demonstration Link:
+https://www.youtube.com/watch?v=OuaU51Vp6_o
+
 ## Author
 
 Bryce McLeod
